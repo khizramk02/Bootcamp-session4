@@ -1,7 +1,121 @@
-.hot{
-    background-color: orange;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.cold{
-    background-color: lightblue;
+body{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.App{
+    background-image: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.3)), url('./images/warm-bg.jpg');
+    /* background-image: url('./images/warm-bg.jpg'); */
+    background-size: 100vh;
+    background-size: cover;
+    background-position: bottom;
+    /* transition: all 1s ease; */
+    transition: 0.4s ease;
+}
+
+.App.cold{
+    background-image: linear-gradient(rgba(0,0,0,0.2) , rgba(0,0,0,0.3)) , url('./images/cold-bg.jpg');
+}
+
+main{
+    height: 100vh;
+    /* background-image: linear-gradient(to bottom , rgba(0,0,0,0.2) , rgba(0,0,0,0.3)); */
+    padding: 25px;
+}
+
+.search-box{
+    width: 100%;
+    /* margin: 0 0 75px; */
+}
+.search-box h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    font-size:45px;
+    display: block;
+    word-spacing: 10px;
+    letter-spacing: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: rgba(0,0,0,0.4);
+    margin: 25px;
+}
+
+.search-box .search-field{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 70px;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+
+    background-color: rgba(255, 255 , 255, 0.5);
+    /* margin-top: -25px; */
+    box-shadow: 0px 5px rgba(0,0,0,0.2);
+    color: black;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.search-box .search-field:focus{
+    background-color: rgba(255, 255 , 255, 0.75);
+}
+
+.location-box .location{
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: 500;
+    text-shadow: 3px 3px rgba(50,50,70,0.5);
+}
+.location-box .date{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px rgba(50,50,70,0.5);
+}
+.weather-box{
+    text-align: center;
+}
+
+.weather-box .temperature{
+    position: relative;
+    display: inline-block;
+    margin: 30px auto;
+    background-color: rgba(255, 255 , 255, 0.5);
+    border-radius: 20px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(50,50,70,0.7);
+    box-shadow: 3px 6px rgba(0,0,0,0.4);
+}
+
+.weather-box .weather{
+    color: white;
+    font-size: 48px;
+    font-weight:  700;
+}
+
+@media only screen and (max-width:500px){
+    .search-box h1{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:390px){
+    .search-box h1{
+        font-size: 20px;
+    }
 }
